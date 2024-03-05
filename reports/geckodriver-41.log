@@ -1,0 +1,24 @@
+1709664530866	geckodriver	INFO	Listening on 127.0.0.1:54289
+1709664533928	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54290" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\momar\\AppData\\Local\\Temp\\rust_mozprofileQ2msAp"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709664534717	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709664534939	Marionette	INFO	Listening on port 54297
+Read port: 54297
+WebDriver BiDi listening on ws://127.0.0.1:54290
+1709664535102	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54290/devtools/browser/3563a0e0-8516-49e7-bd90-eeff09a6b63d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://credit-auto.qsiconseil.ma."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://credit-auto.qsiconseil.ma."
+1709664560294	Marionette	ERROR	TypeError: this.args is null(chrome://remote/content/shared/Prompt.sys.mjs:135:16) JS Stack trace: get isWindowModal@Prompt.sys.mjs:135:16
+GeckoDriver.prototype.setWindowHandle@driver.sys.mjs:1298:16
+GeckoDriver.prototype.switchToWindow@driver.sys.mjs:1219:18
+despatch@server.sys.mjs:318:40
+execute@server.sys.mjs:289:16
+onPacket/<@server.sys.mjs:262:20
+onPacket@server.sys.mjs:263:9
+_onJSONObjectReady/<@transport.sys.mjs:494:20
+1709664560488	Marionette	ERROR	TypeError: this.args is null(chrome://remote/content/shared/Prompt.sys.mjs:135:16) JS Stack trace: get isWindowModal@Prompt.sys.mjs:135:16
+GeckoDriver.prototype.setWindowHandle@driver.sys.mjs:1298:16
+1709664564784	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
