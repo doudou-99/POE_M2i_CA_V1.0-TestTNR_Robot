@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-03-05T17:46:52.057680" rpa="false" schemaversion="5">
+<suite id="s1" name="POE M2i CA V1.0-TestTNR Robot" source="C:\Users\momar\git\POE_M2i_CA_V1.0-TestTNR_Robot">
+<suite id="s1-s1" name="Tests" source="C:\Users\momar\git\POE_M2i_CA_V1.0-TestTNR_Robot\tests">
+<suite id="s1-s1-s1" name="Test Creation Contrat Credit" source="C:\Users\momar\git\POE_M2i_CA_V1.0-TestTNR_Robot\tests\test_creation_contrat_credit.robot">
+<test id="s1-s1-s1-t1" name="TC1 - Mettre en place le contrat de crédit auto" line="21">
+<kw name="Setup Test" owner="common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:46:52.628454" level="INFO">Opening browser 'Firefox' to base url 'http://credit-auto.qsiconseil.ma/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-05T17:46:52.627446" elapsed="9.435909"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-05T17:47:02.064353" elapsed="0.287059"/>
+</kw>
+<status status="PASS" start="2024-03-05T17:46:52.625437" elapsed="9.725975"/>
+</kw>
+<kw name="Connexion" owner="connexion_deconnexion">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:02.355419" level="INFO">Clicking element '//a[@id='lnkAccesCreditAuto']'.</msg>
+<arg>${btn_Acces_Credit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:02.354425" elapsed="0.626513"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:02.981940" level="INFO">Verifying element '//body[@id='page-top']/div[2]/div/div/form/fieldset/legend' contains exact text 'Connectez-vous'.</msg>
+<arg>${info_Connectez_vous}</arg>
+<arg>Connectez-vous</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-05T17:47:02.980938" elapsed="0.033708"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:03.016157" level="INFO">Typing text 'gcd' into text field '//input[@id='username']'.</msg>
+<arg>${input_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:03.014646" elapsed="0.090911"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:03.106562" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
+<msg time="2024-03-05T17:47:03.136728" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:03.106562" elapsed="0.056860"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:03.165444" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<arg>${btn_Connecter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:03.164442" elapsed="0.627044"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:03.792481" level="INFO">Verifying element '//body[@id='page-top']/div/h4' contains exact text 'Bienvenue sur l'application Crédit Auto'.</msg>
+<arg>${titre_Page_Accueil}</arg>
+<arg>Bienvenue sur l'application Crédit Auto</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-05T17:47:03.792481" elapsed="0.023124"/>
+</kw>
+<arg>${usergestionnaire}</arg>
+<arg>${passwordgestionnaire}</arg>
+<status status="PASS" start="2024-03-05T17:47:02.352411" elapsed="1.464731"/>
+</kw>
+<kw name="Simulation du credit" owner="simulation_credit">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:03.821170" level="INFO">Clicking element '//a[@id='lnkCredit']'.</msg>
+<arg>${link_Credit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:03.820178" elapsed="0.224800"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:04.046563" level="INFO">Clicking element '//a[@id='lnkCreerContrat']'.</msg>
+<arg>${link_Creer_contrat_credit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:04.044978" elapsed="0.330436"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:04.377959" level="INFO">Verifying element '//body[@id='page-top']/div/h3' contains exact text 'Création d'un contrat de crédit'.</msg>
+<arg>${titre_Page_Creation_Contrat}</arg>
+<arg>Création d'un contrat de crédit</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-05T17:47:04.376997" elapsed="0.032120"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:04.410131" level="INFO">Verifying element '//div[@id='contract']/form/fieldset/legend' contains exact text 'Simulation d'un crédit'.</msg>
+<arg>${titre_Formulaire_Simulation}</arg>
+<arg>Simulation d'un crédit</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-05T17:47:04.409117" elapsed="0.019966"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:04.430594" level="INFO">Typing text '30000' into text field '//input[@id='form_simulation_montantAchat']'.</msg>
+<arg>${input_Montant_achat}</arg>
+<arg>${montant_achat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:04.429083" elapsed="0.088315"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:04.518345" level="INFO">Typing text '27000' into text field '//input[@id='form_simulation_montantCredit']'.</msg>
+<arg>${input_Montant_credit}</arg>
+<arg>${montant_credit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:04.517398" elapsed="0.036111"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:04.554505" level="INFO">Typing text '30' into text field '//input[@id='form_simulation_duree']'.</msg>
+<arg>${input_Duree}</arg>
+<arg>${duree}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:04.553509" elapsed="0.033267"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:04.587776" level="INFO">Selecting options from selection list '//select[@id='form_simulation_categorie']' by value B.</msg>
+<arg>${select_Categorie}</arg>
+<arg>${categorie}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-03-05T17:47:04.586776" elapsed="0.267586"/>
+</kw>
+<kw name="Verification champs de la simulation" owner="simulation_credit">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T17:47:04.872167" level="INFO">${text_montantachat} = </msg>
+<var>${text_montantachat}</var>
+<arg>${input_Montant_achat}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T17:47:04.855361" elapsed="0.017818"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-03-05T17:47:04.874193" level="FAIL">'' cannot be converted to an integer: ValueError: invalid literal for int() with base 10: ''</msg>
+<var>${nb_achat}</var>
+<arg>${text_montantachat}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="FAIL" start="2024-03-05T17:47:04.873179" elapsed="0.001994">'' cannot be converted to an integer: ValueError: invalid literal for int() with base 10: ''</status>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${text_montantcredit}</var>
+<arg>${input_Montant_credit}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-05T17:47:04.876195" elapsed="0.001001"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<var>${nb_credit}</var>
+<arg>${text_montantcredit}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="NOT RUN" start="2024-03-05T17:47:04.877196" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${text_duree}</var>
+<arg>${input_Duree}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-05T17:47:04.877196" elapsed="0.000999"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<var>${nb_duree}</var>
+<arg>${text_duree}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="NOT RUN" start="2024-03-05T17:47:04.878195" elapsed="0.000547"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${nb_achat} &lt; 50000 and ${nb_achat} &gt; 6250</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2024-03-05T17:47:04.878742" elapsed="0.001025"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${nb_credit} &lt; 40000 and ${nb_credit} &gt; 5000</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2024-03-05T17:47:04.879767" elapsed="0.001003"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${nb_duree} &lt; 48 and ${nb_duree} &gt; 12</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2024-03-05T17:47:04.880770" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-03-05T17:47:04.855361" elapsed="0.026406">'' cannot be converted to an integer: ValueError: invalid literal for int() with base 10: ''</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${btn_Calculer_credit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-05T17:47:04.881767" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${legend_Nouveau_Contrat}</arg>
+<arg>Nouveau contrat</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2024-03-05T17:47:04.881767" elapsed="0.000996"/>
+</kw>
+<arg>${montant_achat}</arg>
+<arg>${montant_credit}</arg>
+<arg>${duree_credit}</arg>
+<arg>${categorie}</arg>
+<status status="FAIL" start="2024-03-05T17:47:03.818167" elapsed="1.065603">'' cannot be converted to an integer: ValueError: invalid literal for int() with base 10: ''</status>
+</kw>
+<kw name="Calcul de l'echeancier" owner="echeancier">
+<status status="NOT RUN" start="2024-03-05T17:47:04.884761" elapsed="0.001005"/>
+</kw>
+<kw name="Recherche d'un client" owner="recherche_client">
+<arg>${prenom_client}</arg>
+<arg>${nom_client}</arg>
+<status status="NOT RUN" start="2024-03-05T17:47:04.886767" elapsed="0.000997"/>
+</kw>
+<kw name="Validation d'un client existant" owner="recherche_client">
+<arg>${prenom_client}</arg>
+<arg>${nom_client}</arg>
+<status status="NOT RUN" start="2024-03-05T17:47:04.889285" elapsed="0.000000"/>
+</kw>
+<kw name="Impression des deux exemplaires du contrat" owner="resume_contrat">
+<status status="NOT RUN" start="2024-03-05T17:47:04.890305" elapsed="0.000000"/>
+</kw>
+<kw name="Enregistrement du contrat" owner="resume_contrat">
+<status status="NOT RUN" start="2024-03-05T17:47:04.891315" elapsed="0.000000"/>
+</kw>
+<kw name="Deconnexion" owner="connexion_deconnexion">
+<status status="NOT RUN" start="2024-03-05T17:47:04.892314" elapsed="0.000000"/>
+</kw>
+<kw name="Teardown" owner="common">
+<status status="NOT RUN" start="2024-03-05T17:47:04.893306" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-03-05T17:46:52.623439" elapsed="12.270882">'' cannot be converted to an integer: ValueError: invalid literal for int() with base 10: ''</status>
+</test>
+<status status="FAIL" start="2024-03-05T17:46:52.135663" elapsed="12.761640"/>
+</suite>
+<status status="FAIL" start="2024-03-05T17:46:52.130528" elapsed="12.772349"/>
+</suite>
+<status status="FAIL" start="2024-03-05T17:46:52.090317" elapsed="12.817557"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="POE M2i CA V1.0-TestTNR Robot">POE M2i CA V1.0-TestTNR Robot</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">POE M2i CA V1.0-TestTNR Robot.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test Creation Contrat Credit">POE M2i CA V1.0-TestTNR Robot.Tests.Test Creation Contrat Credit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
