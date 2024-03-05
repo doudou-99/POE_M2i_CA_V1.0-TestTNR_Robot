@@ -3,9 +3,7 @@ name: Robot Framework CI
 on:
   push:
     branches:
-      - master
-  pull_request:
-  workflow_dispatch:
+      - main
 
 jobs:
     Run-Test:
