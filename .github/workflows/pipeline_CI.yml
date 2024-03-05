@@ -16,4 +16,4 @@ jobs:
             pip install --upgrade pip
             pip install -r requirements.txt
         - name: Run Test
-          run: robot -d reports .\tests\test_authentification.robot .\tests\test_creation_contrat_credit.robot
+          run: robot -d reports tests/test_authentification.robot tests/test_creation_contrat_credit.robot
