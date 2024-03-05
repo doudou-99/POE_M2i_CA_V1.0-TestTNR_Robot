@@ -16,12 +16,7 @@ Impression des deux exemplaires du contrat
 
 
 Enregistrement du contrat
-    @{WindowHandles}=   Get Window Handles
-    sleep    4s
-    @{WindowIdentifier}=    Get Window Identifiers
-    sleep    4s
-    @{Browser}=    Get Browser Ids
-    Sleep    4s
-
+    Sleep    10s
+    Switch Window    locator=MAIN
     Click Element    ${btn_Enregistrer}
     Page Should Contain Element    ${verif_creation_contrat}
