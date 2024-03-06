@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    http://credit-auto.qsiconseil.ma/
-${BROWSER}    Edge
+${BROWSER}    Chrome
 
 
 *** Keywords ***
