@@ -19,6 +19,12 @@ jobs:
         - run: |
             echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
             ${{ steps.setup-chrome.outputs.chrome-path }} --version
+        - name: Setup Edge
+          uses: browser-actions/setup-edge@v1
+        - run: (Get-Item (Get-Command msedge).Source).VersionInfo.ProductVersion
+        - name: Setup Firefox  
+          uses: browser-actions/setup-firefox@v1
+        - run: firefox --version
         - name: Set up Python 3.12
           uses: actions/setup-python@v3
           with:
